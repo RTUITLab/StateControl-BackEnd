@@ -8,14 +8,12 @@ import java.util.List;
 public class Devices {
 
     private long id;
-    private String name;
     private String game;
     private int sessionId;
 
     public Devices() {}
 
-    public Devices(String Name, String Game, int SessionId) {
-        this.name = Name;
+    public Devices(String Game, int SessionId) {
         this.game = Game;
         this.sessionId = SessionId;
     }
@@ -28,15 +26,6 @@ public class Devices {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    @Column(name = "Name", nullable = false)
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Column(name = "Game", nullable = false)
@@ -59,6 +48,6 @@ public class Devices {
 
     @Override
     public String toString() {
-        return "{\n\tid=" + id + ";\n\tname=" + name + ";\n\tgame=" + game + ";\n\tip=" + sessionId + ";\n}";
+        return "{\n\tid=" + id + ";\n\tgame=" + game + ";\n\tip=" + sessionId + ";\n}";
     }
 }

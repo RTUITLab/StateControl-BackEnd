@@ -24,8 +24,8 @@ public class ControlController {
     @GetMapping(value = "/games", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<String> getAllGames() {
         List<String> games = new ArrayList<>();
-        stateRepository.findAll().forEach(state -> {
-            games.add(state.getGameName());
+        devicesRepository.findAll().forEach(device -> {
+            games.add(device.getGame());
         });
         return games;
     }
