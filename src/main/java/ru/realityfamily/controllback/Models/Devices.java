@@ -9,11 +9,11 @@ public class Devices {
 
     private long id;
     private String game;
-    private int sessionId;
+    private String sessionId;
 
     public Devices() {}
 
-    public Devices(String Game, int SessionId) {
+    public Devices(String Game, String SessionId) {
         this.game = Game;
         this.sessionId = SessionId;
     }
@@ -38,11 +38,11 @@ public class Devices {
     }
 
     @Column(name = "SessionId", nullable = false)
-    public int getSessionId() {
+    public String getSessionId() {
         return sessionId;
     }
 
-    public void setSessionId(int sessionId) {
+    public void setSessionId(String sessionId) {
         this.sessionId = sessionId;
     }
 
